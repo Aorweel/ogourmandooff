@@ -1,10 +1,10 @@
 body{
-	background-image: url("image/backgroundr.svg");
 	padding: 0px;
 	margin: 0px;
+	font-family: Arial;
 }
 
-.menu{
+.header{
 	background-color: #e8481b;
 	display: flex;
 	justify-content: space-between;
@@ -22,14 +22,88 @@ body{
 
 }
 
-.divgauche img{
+.divgauche .imgmenu{
 height: 50px;
 margin: 20px;
 }
 
-.divgauche p{
-	margin: 20px;
-	color: white;
-	font-size: 20px;
+
+.header .socialLinks{
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	align-items: center;
 }
 
+.header .socialLinks li{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.header .socialLinks li a{
+	min-width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header .socialLinks li a:hover{
+	background: #fcc918;
+}
+
+.header .socialLinks li img{
+	width: 25px;
+}
+
+.menu{
+	position: relative;
+}
+
+.menu .menuderoulant{
+	position: absolute;
+	left: -20px;
+	top: 103%;
+	padding: 40px;
+	background-color: #fcc918 ;
+	width: 100vw;
+	max-width: 300px;
+	display: none;
+}
+
+.menu .menuderoulant ul{
+	margin: 0;
+	padding: 0;
+}
+
+.menu .menuderoulant ul li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu .menuderoulant ul li a{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 10px 0;
+	display: inline-block;
+}
+
+.menu .menuderoulant hr{
+	border: 0px;
+	background: white;
+	border: 2px white solid;
+    border-radius: 2px;
+}
+
+.menu #menucheckbox:checked ~ .menuderoulant{
+	display: block;
+}
+
+.menu #menucheckbox{
+	display: none;
+}
